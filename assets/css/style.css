@@ -1,0 +1,442 @@
+/* ==== STILE TESTI ==== */
+  
+/*TITOLI scelta font, formattazione e colori*/
+h1,h2 {
+  font: bold 50px 'Zilla Slab', serif;
+  color: #0A235F;
+  opacity: 0; /*il titolo è inizialmente invisibile*/
+  transform: translateY(20px); /*lo sposto leggermente verso il basso per creare un effetto di entrata*/
+  animation: comparsa 1s ease-out forwards; /* richiamo l'anmazione "comparsa" con transizione fluida (ease-out) lasciandolo poi visibile (forwards)*/
+  animation-delay: 0.2s; /*aspetto 0,2 secondi prima di far partire l'animazione di comparsa*/
+}
+
+h2 { /*dimensione e allineamento specifici per h2 */
+  font-size: 40px;
+  text-align: center; 
+}
+
+/* PARAGRAFO */
+p {
+  font: 22px 'Montserrat', sans-serif; /* font per i paragrafi, dimensione 22px */
+  color: #ffffff; /*colore bianco*/
+}
+
+a {
+  text-decoration: none; /*rimuove la sottolineatura dei link cliccabili*/
+}
+
+/* PULSANTI */
+.btn-primario {
+  background-color: #F8D548; /* colore di background per il tasto primario */
+  color: #0A235F; /* colore del testo */
+  border: none; /*rimuovo il bordo per un design più moderno*/
+  font: bold 14px 'Montserrat', sans-serif; /* font: grassetto, 14px, Montserrat */
+  text-transform: uppercase; /*trasformazione del testo in maiuscole*/
+  padding: 12px 24px; /*spaziatura tra il contenuto e il bordo*/
+  margin: 20px; /*inserisco il margine per distanziarlo dagli altri elementi*/
+  box-shadow: 0 4px 8px #0A235F; /*applico un'ombra per dare profondità*/
+}
+
+.btn-primario:hover { /*cambio colore al passaggio del mouse*/
+    background-color: #E6C035;
+}
+
+.btn-secondario {
+  background-color: #0A235F; /* background del tasto secondario */
+  color: #ffffff; /* colore del testo */
+  border: none; /*rimuovo il bordo per un design più moderno*/
+  font: bold 14px 'Montserrat', sans-serif; /* font: grassetto, 14px, Montserrat */
+  text-transform: uppercase; /*trasformazione del testo in maiuscole*/
+  padding: 12px 24px; /*spaziatura tra il contenuto e il bordo*/
+  margin: 20px; /*inserisco il margine per distanziarlo dagli altri elementi*/
+  box-shadow: 0 4px 8px #0A235F; /*applico un'ombra per dare profondità*/
+}
+
+.btn-secondario:hover { /*cambio colore del pulsante al passaggio del mouse*/
+  background-color: #0c2e7d;
+}
+
+/* PULSANTE SCROLL UP "TORNA SU" -*/
+#scrollTopBtn {
+  position: fixed; /* posizione fissa sul viewport */
+  bottom: 230px; /* spazio dal fondo per evitare sovrapposizione col footer */
+  right: 30px; /* distanza dal bordo destro del viewport */
+  z-index: 999; /* per mantenerlo sempre in primo piano */
+  font: bold 12px 'Montserrat', sans-serif; /* font coerente, dimensione 12px, grassetto */
+  text-transform: uppercase; /* trasforma il testo in maiuscole */
+  background-color: #1782e7; /* sfondo azzurro */
+  color: #0A235F; /* testo blu */
+  border-radius: 20px; /* angoli arrotondati volutamente diversi */
+  padding: 20px; /* spazio interno per una buona leggibilità */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ombra per effetto tridimensionale */
+  transition: all 0.3s ease-in-out; /* transizione morbida per hover */
+  display: none; /* nascosto finché non si scrolla */
+}
+
+/* EFFETTO HOVER sul pulsante "Torna su" */
+#scrollTopBtn:hover {
+  background-color:#F8D548; /* giallo al passaggio */
+  transform: scale(1.1); /* leggero zoom */
+}
+
+/*impostazioni generali per il body*/
+body {
+  overflow-x: hidden; /*disabilito lo scroll orizzontale per evitare un comportamento anomalo del layout*/
+  position: relative; /*imposto un contesto di posizionamento per i figli assoluti*/
+  word-wrap: break-word; /*attivo la rottura delle parole troppo lunghe per evitare overflow*/
+}
+
+/* ==== STILE DEL MENU HEADER ==== */
+header {
+    position: sticky; /* rendo l'header sticky per farlo scorrere insieme alla pagina*/
+    top: 0; /*attacco lo sticky al bordo superiore del viewport*/
+    width: 100%; /*larghezza piena*/
+    z-index: 10; /*porto l'header avanti di 10 livelli per lasciarlo sempre in primo piano*/
+    background: #f5f5f5; /*colore di sfondo dell'header*/
+  }
+
+.navbar-brand img {
+  height: 80px;/*altezza fissa del logo*/
+}
+
+.navbar-nav {
+  align-items: center; /*allinea le voci di menu centralmente*/
+  gap: 40px; /*inserisce uno spazio tra una voce e l'altra*/
+}
+
+/*font e colore delle voci del menu*/
+.navbar-nav .nav-link {
+  font: bold 20px 'Montserrat', sans-serif;
+  color: #0A235F;
+}
+
+/*animazione nel menu al passaggio del mouse*/
+.navbar-nav .nav-link:hover {
+  color: #F8D548; /*cambio colore voci*/
+  transition: all 0.3s ease-in-out; /* transizione morbida per hover */
+  transform: scale(1.1); /* leggero zoom */
+}
+
+/* ==== STILE FOOTER ==== */
+footer {
+  background-color: #0a235f; /*colore sfondo*/
+  font-family: 'Montserrat', sans-serif; /*font*/
+  padding: 32px; /*distanza tra contenuto e bordo elemento*/
+  z-index: 3;
+ }
+  
+/*parte sinistra del footer (logo e nome azienda)*/
+.footer-brand {
+  display: flex; /*disposizione flessibile del testo e del logo per evitare che si sovrappongano*/
+  align-items: center; /* per dare un allineamento centrale e un aspetto di design gradevole */
+  gap: 16px; /*spazio tra logo e nome azieda*/
+}
+  
+/*altezza del logo nel footer fissa*/
+footer img {
+  height: 80px;
+}
+  
+/*stile della parte destra del footer (link ufficiali de cecco)*/
+.footer-links {
+  display: flex; /*disposizioone flessibile degli elementi*/
+  justify-content: center; /*allineamento per un maggior design gradevole*/
+  gap: 50px; /*spazio tra le voci*/
+}
+  
+/*formattazione degi link ufficiali*/
+.footer-links a {
+  color: #ffffff; /*per coprire l'effetto blu classico dei link cliccabili*/
+  font-weight: bold; /*grassetto*/
+  font-size: 16px; /*dimensione*/
+}
+  
+/*effetto sui link a destra del footer al passaggio del mouse*/
+.footer-links a:hover {
+  color: #F8D548;
+}
+  
+/*formattazione del copyright, sezione in basso del footer*/
+.footer-bottom {
+  text-align: center; /*allinea la scritta del copyright al centro*/
+  padding-block: 12px; /*aggiunge uno spazio tra il contenuto e il bordo del blocco*/
+}
+
+/* ==== PAGINA CHI SIAMO ==== */
+
+/*HERO SECTION*/
+
+/*sezione generale*/
+.hero {
+  background-image: url('../img/Hero_DeCecco.webp'); /*link all'immagine di sfondo*/
+  background-size: cover; /* permette una visualizzazione ottimale del background*/
+  background-position-y: 50%; /*sposto il background verso il bordo superiore per centrare l'immagine*/
+  }
+
+/*contenuti della sezione*/
+.contenuti_hero {
+  margin-top: 80px; /*margine superiore per il menu header*/
+  padding: 80px 80px 80px 80px; /*aggiunto spazio a destra per mantenere la linea con il logo e a sinistra per una 
+  corretta visualizzazione in mobile*/
+  text-align: justify; /*formatto il testo con "justify" per un aspetto più gradevole*/
+}
+
+/*call to action della hero section*/
+.hero .btn-primario{ /*formatto il pulsante della hero section*/
+  margin: 20px 0px; /*rimuovo il margine predefinito e ne imposto solo uno per la parte superiore e inferiore*/
+}
+
+/*SEZIONE OLTRE LA PASTA*/
+
+/*sezione generale*/
+.oltre-pasta {
+  background-image: url('../img/pasta_Homepage.webp');
+  background-size: contain; /* permette una visualizzazione ottimale del background*/
+  background-position-x: right; /*posiziono il background a destra*/
+  background-repeat: no-repeat; /*disabilito la ripetizione*/
+  background-position-y: bottom; /*attacco il background al bordo inferiore */
+  padding: 100px 0px; /*inserisco uno spazio superiore alla sezione*/
+  position: relative; /* imposto relative per permettere al background di invadere la 3° sezione */
+  margin-bottom: -100px; /* Sovrappone la sezione 2 alla sezione 3 */
+}
+
+/*colonne della sezione oltre la pasta*/
+.oltre-pasta .col-12 {
+  display: flex; /* imposto la colonna come contenitore flessibile per gestire meglio l'impilamento degli elementi */
+  flex-direction: column; /* ordinamento della colonna verticale (testi sopra, immagini sotto) */
+  align-items: center; /* Centro gli elementi figli lungo l’asse orizzontale per garantire un layout armonioso */
+  text-align: center; /* Allineo il testo al centro per migliorare la leggibilità su tutti i dispositivi */
+}
+
+
+/*immagini delle colonne oltre la pasta*/
+.oltre-pasta .col-12 img,
+.oltre-pasta .col-md-4 img {
+  width: 100%; /*rendo le immagini responsive adattandole alla larghezza della colonna*/
+  max-width: 300px; /* impongo un limite massimo per evitare che le immagini siano troppo grandi*/
+  margin-top: 20px; /*margine per distanziare le colonne dal titolo della sezione*/
+}
+
+/*paragrafo sezione oltre la pasta*/
+.oltre-pasta p {
+  color: #0A235F; /* Colore blu per i paragrafi */
+  max-width: 300px; /* Limito la larghezza del paragrafo per migliorare la leggibilità*/
+  text-align: justify; /*giustifico il testo per dargli un aspetto in linea*/
+  margin-bottom: 100px; /*aggiungo un margine inferiore per distanziarlo dall'immagine di background*/
+}
+  
+/* SEZIONE AMBIENTE */
+
+/*sezione generale*/
+.ambiente {
+  background-image: url('../img/sostenibilita_home.webp'); /*link all'immagine di sfondo*/
+  background-size: cover; /* permette una visualizzazione ottimale del background*/
+  height: 800px; /*altezza fissa per permettere di visualizzare tutta l'immagine di background*/
+  align-items: center; /*allineo gli elementi centralmente per dare respiro al background*/
+  }
+
+/*paragrafo della sezione ambiente*/
+.ambiente p {
+  color: #0A235F; /* Colore blu per i paragrafi */
+  text-align: justify; /*giustifico il testo per dargli un aspetto in linea*/
+  max-width: 500px; /* Limito la larghezza del paragrafo per migliorare la leggibilità*/
+  padding: 20px; /* aggiungo un padding per rendere il testo in linea con gli altri elementi */
+}
+
+/*titolo della sezione ambiente*/
+.ambiente h2 {
+  text-align: left; /*allineo il testo a sinistra per renderlo armonioso con l'immagine di background*/
+  padding: 20px; /*aggiungo il padding per rendere il testo in linea con gli altri elementi*/
+}
+
+/* ==== PAGINA FAQ ==== */
+
+/* titolo principale*/
+.faq h1 {
+  padding-top: 40px; /*margine superiore per il menu header*/
+  color: #F8D548; /*colore giallo*/
+  font-size: 54px; /*dimensione del font*/
+  text-align: center; /*allineamento*/
+  text-shadow: 0 4px 8px #0a235f; /*ombra del testo per tridimensionalità*/
+}
+
+/* titolo secondario h2*/
+.faq h2 {
+  color: #ffffff; /*colore bianco*/
+  margin-bottom: 50px; /*margine inferiore per separarlo ulteriormente dalla lista FAQ*/
+  text-shadow: 0 4px 8px #0a235f; /*ombra del testo per tridimensionalità*/
+}
+
+/* corpo della sezione */
+.faq {
+  background-color: #499FEF; /* Colore neutro per separare visivamente la sezione */
+  padding: 80px 0; /* Spazio interno per distanziare Header e Footer */
+}
+
+/*lista domande e risposte*/
+.list-group {
+  box-shadow: 0 4px 8px #0A235F; /*applico un'ombra per dare profondità*/
+  margin-bottom: 20px; /*margine inferiore per distanziare i pulsanti d'azione */
+}
+
+/*domanda e risposta singola delle faq*/
+.list-group-item { 
+  padding: 20px; /*aggiungo padding su tutti i lati per una migliore leggibilità*/
+}
+
+/*corpo della pagina ( titoli + lista faq + pulsanti)*/
+.contenuti_faq {
+  z-index: 2; /*livello superiore rispetto alle immagini*/
+}
+
+ /*pasta decorativa sx fusilli*/
+.fusilli {
+  margin-top: 200px;/*margine superiore*/
+  transform: scale(4.0); /* zoom dell'immagine*/
+  z-index: 1; /* livello inferiore ai contenuti FAQ */
+}
+
+/*pasta decorativa sx farfalle*/
+.farfalle {
+  margin-top: 500px;/*margine superiore*/
+  transform: rotate(65deg) scale(5.0);/* zoom e rotazione dell'immagine*/
+  z-index: 1; /* livello inferiore ai contenuti FAQ */
+}
+
+/*pasta decorativa dx penne*/
+.penne {
+  margin-top: 450px;/*margine superiore*/
+  transform: scale(3.8); /* zoom dell'immagine*/
+  z-index: 1; /* livello inferiore ai contenuti FAQ */
+}
+
+/* ==== PAGINA SOSTENIBILITÀ ==== */
+
+/* Sezione parallax montagne */
+.montagne {
+  position: fixed; /*fisso l'elemento in alto per creare l'effetto parallax con gli altri contenuti*/
+  top: 90px; /*lascio uno spazio superiore per l'header in modo da preservare la visibilità ottimale dell'immagine*/
+  z-index: -1; /* dichiaro il l'ordine del livello negativo per garantire l'effetto parallax*/
+  width: 100%; /* imposto la larghezza completa dell'immagine*/
+  height: 600px; /*definisco l'altezza fissa per la sezione*/
+  background-image: url('../img/montagne.webp'); /*url dell'immagine*/
+  background-size: cover; /*adatto l'immagine alle dimensioni del contenitore*/
+  background-position: center; /*centro l'immagine all'interno del contenitore*/
+  display: flex; /*attivo il layout flex per centrare il titolo presente nel contenitore*/
+  align-items: center; /*allineo verticalmente gli elementi al centro*/
+  justify-content: center; /*allineo orizzontalmente gli elementi al centro*/
+  overflow: hidden; /* utilizzo hidden per evitare che il contenuto esca dalla sezione*/
+}
+
+/*finto sfondo per sezione parallax*/
+.finto-sfondo { 
+  background-color: rgb(2, 59, 22); /* colore della montagna */
+  position: absolute; /*posizione assoluta per far si che non sia visibile*/
+  width: 100%; /*larghezza piena*/
+  height: 1000px; /* altezza massima per evitare buchi bianchi su mobile o schermi molto ampi */
+  z-index: -2; /* dietro tutti i layer */
+}
+
+/*Titolo principale della pagina*/
+.titolo-parallax {
+  text-align: center; /*titolo allineato centralmente*/
+  color: #ffffff; /*colore bianco*/
+  text-shadow: 0 4px 8px #0A235F; /*applico un'ombra per dare profondità*/
+  padding-bottom: 15%; /*aggiungo un leggero padding per rendere il titolo più armonioso con il background*/
+  max-width: 100%;
+}
+
+/* Sezione intermedia grano */
+.sfondo-grano {
+  z-index: 2; /*imposto il livello a 2 per creare l'effetto parallax rispetto alla sezione "montagne"*/
+  height: 1000px; /*imposto l'altezza naturale dell'immagine*/
+  background-image: url('../img/grano.webp'); /*url dell'immagine*/
+  background-size: cover; /*imposto cover per adattare l'immagine al contenitore*/
+  background-position: center; /*centro il background all'interno del contenitore*/
+  overflow: hidden; /*evito che il contenuto esca dalla sezione*/
+  display: flex; /*utilizzo flex per gestire gli elementi all'interno del contenitore*/
+  align-items: end; /*allineo gli elementi (paragrafo di presentazione sostenibilità) alla fine della sezione*/
+}
+
+/*Contenitore effetto vetro su grano*/
+.effetto-vetro {
+  background: linear-gradient(135deg, #FFFFFF1A, #FFFFFF00); /* sfondo sfumato trasparente*/
+  backdrop-filter: blur(20px); /* sfocatura per effetto vetro */
+  -webkit-backdrop-filter: blur(20px); /* compatibilità estesa per Safari e browser WebKit-based */
+  border: 1px solid #FFFFFF2E; /* bordo grigio e appena trasparente per separarlo dallo sfondo */
+  border-radius: 32px; /* angoli arrotondati per richiamare le curve morbide del paesaggio sullo sfondo */
+  padding: 2% 4%; /* spazio interno proporzionale, adattabile su tutte le risoluzioni per responsive design*/
+  box-shadow: 0 8px 32px #0000005E; /* ombra per dare profondità e risalto visivo */
+  margin-bottom: 5%; /* margine inferiore per distanziarlo dalla fine sezione */
+  width: 100%; /* larghezza piena per adattarlo al contenitore */
+}
+
+/* SEZIONE DOWNLOAD*/
+
+/* Sezione contenuto download */
+.contenuto-download {
+  width: 100%; /*larghezza piena*/
+  z-index: 2; /*imposto il livello ad una posizione superiore rispetto a "montagne" per garantire l'effetto parallax*/
+  padding: 60px; /* imposto uno spazio generale tra il contenuto e il bordo del contenitore*/
+  background-color: #F8D548; /*imposto il colore di background*/
+}
+
+/*card bianche dei report*/
+.card-download {
+  position: relative; /* definisco il contesto per il posizionamento assoluto dell’etichetta anno */
+  display: flex; /* imposto il layout flessibile per organizzare i contenuti */
+  flex-direction: column; /* dispongo gli elementi in colonna */
+  justify-content: space-between; /* distribuisco lo spazio tra contenuti superiori e inferiori */
+  text-align: center; /* centro orizzontalmente il contenuto testuale dei link per scaricare */
+  background-color: #ffffff; /* imposto il colore di sfondo delle card */
+  box-shadow: 0 8px 32px #0000005E; /* aggiungo profondità visiva con un’ombra morbida */
+  border-radius: 20px; /* angoli arrotondati per un’estetica più armoniosa */
+  padding-bottom: 20px; /* spaziatura inferiore per un migliore respiro visivo */
+  margin: 30px 0px; /*margine delle card superiore e inferiore per dare più respiro alla sezione*/
+  min-height: 550px; /* altezza minima per garantire l’allineamento responsive di tutte le card */
+}
+
+/*immagine di testata*/
+.box-immagine img{
+  width: 100%; /*larghezza piena dell'immagine, relativa al contenitore*/
+  border-top-left-radius: 20px; /*bordo superiore sx arrotondato per farlo combaciare con il bordo del contenitore*/
+  border-top-right-radius: 20px; /*bordo superiore dx arrotondato per farlo combaciare con il bordo del contenitore*/
+}
+
+/*etichetta anno di riferimento report*/
+.etichetta-anno {
+  background-color: #499FEF; /*colore di sfondo celeste per dare risalto all'anno*/
+  color:#ffffff; /*testo bianco*/
+  font-family: 'Zilla Slab', serif; /*font*/
+  font-size: 18px; /*dimensione font*/
+  padding: 10px; /*spazio tra il contenuto e il bordo*/
+  border-top-left-radius: 20px; /*bordo superiore di sx arrotondato, per farlo combaciare con il bordo del contenitore*/
+  border-bottom-right-radius: 20px; /*bordo inferiore di destra arrotondato, per un effetto di design*/
+  position: absolute; /* sovrappone l'etichetta all'immagine, fuori dal normale flusso del layout */
+}
+
+/*paragrafo riassuntivo report*/
+.descrizione {
+  margin: 0px 20px; /*margini laterali del testo per distanziarli dal bordo della card*/
+  color: #0A235F; /*colore del testo*/
+  font-size: 16px; /*dimensione del testo*/
+  text-align: left; /*allineamento del testo*/
+}
+
+/* ========= ANIMAZIONI ========== */
+
+@keyframes comparsa { /*definisco l'animazione "comparsa"*/
+  to { /* Lo stato finale dell'animazione (lo stato iniziale è già definito nel selettore h1) */
+    opacity: 1; /*rende il titolo visibile aumentando l'opacità*/
+    transform: translateY(0); /*e lo riporta all'altezza iniziale*/
+  }
+}
+
+/* ========= MEDIA QUERY ========== */
+
+/* HOMEPAGE - SEZIONE AMBIENTE*/
+  @media (max-width: 800px) { /* Media Query per schermi più piccoli per gestire correttamente il background*/
+    .ambiente {
+      background-position: right ; /* Sposta l'immagine di background a sinistra per evitare la sovrapposizione tra immagine e testo*/
+    }
+  }
