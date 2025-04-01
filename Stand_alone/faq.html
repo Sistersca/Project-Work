@@ -1,0 +1,159 @@
+<!DOCTYPE html> <!-- la pagina utilizza HTML5-->
+<html lang="it"> <!-- specifica la lingua italiana utile per accessibilità es. lettori vocali -->
+<head>
+  <title>De Cecco - Chi Siamo</title> <!-- titolo della scheda sul browser -->
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png"> <!-- favicon della pagina-->
+  <meta charset="UTF-8"> <!-- codifica dei caratteri -->
+  <!-- Meta tag SEO per la pagina FAQ -->
+  <!-- Inseriti per dimostrare buona pratica, anche se il sito non sarà pubblicato -->
+  <meta name="title" content="FAQ De Cecco - Domande frequenti sulla sostenibilità"> <!--titolo che apparirà sul motore di ricerca-->
+  <meta name="description" content="Risposte alle domande più comuni sull’approccio sostenibile di De Cecco nella produzione di pasta di alta qualità."> <!--descrizione che accompagnerà il titolo-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"> <!-- gestisce la 
+  responsività e permette lo zoom per l'accessibilità (pratica consigliata anche da google PageSpeed insight) -->
+  <!-- link cdn bootstrap e google font -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet"> <!-- importo Zilla slab e Montserrat font ufficiali De Cecco -->
+  <link rel="stylesheet" href="../assets/css/style.css"> <!-- link al foglio di stile -->
+</head>
+
+<body>
+  
+<!-- sezione menu header -->
+  <header>
+    <nav class="navbar navbar-expand-md"> <!-- barra di navigazione principale per larghezza uguale o superiore a 768px -->
+      <div class="container-fluid"> <!-- contenitore a larghezza piena -->
+        <!-- logo cliccabile che riporta alla home -->
+        <a class="navbar-brand" href="index.html"> 
+          <img src="../assets/img/Logo_DeCecco.webp" alt="Logo De Cecco">
+        </a>
+        <!-- hamburger menu per mobile  -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#headerNav" aria-controls="headerNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- tutti gli attributi aria (Accesible Rich Internet Applications) sono stati inseriti per migliorare l'accessibilità -->  
+          <span class="navbar-toggler-icon"></span> <!-- icona dell’hamburger menu generata automaticamente da Bootstrap -->
+        </button>
+        <div class="collapse navbar-collapse" id="headerNav"> <!-- contenitore del menu di navigazione, collassabile su dispositivi piccoli -->
+          <ul class="navbar-nav mx-auto"> <!-- elenco voci menu centrato orizzontalmente -->
+            <li class="nav-item"><a class="nav-link" href="index.html">Chi Siamo</a></li>
+            <li class="nav-item"><a class="nav-link" href="sostenibilita.html">Sostenibilità</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<main> <!--contenuto principale della pagina-->
+<section class="faq"><!-- SEZIONE FAQ -->
+  <div class="container"> <!-- contenitore con larghezza massima e padding orizzontale gestito da Bootstrap -->
+    <div class="row"><!-- riga per gestire le tre colonne: immagini decorative sx + contenuto + immagine decorative dx -->
+      
+      <!-- Colonna sinistra con due immagini decorative -->
+      <div class="col-md-1 d-none d-md-block decorazioni_sinistra"> <!-- colonna visibile solo da md in poi, con classe personalizzata 
+        per gestire la posizione delle decorazioni -->
+        <img src="../assets/img/floating_fusilli.webp" alt="fusilli decorativi" class="img-fluid fusilli"> <!-- immagine decorativa fusilli con 
+        classe per personalizzazione -->
+        <img src="../assets/img/floating_farfalle.webp" alt="pasta farfalle decorativa" class="img-fluid farfalle"> <!-- immagine decorativa 
+        farfalle con classe per personalizzazione -->
+      </div>
+
+      <!-- Contenuto centrale della sezione FAQ -->
+      <div class="col-12 col-md-10 contenuti_faq"> <!-- colonna principale: 12 su mobile, 10 da md in poi, contiene testi e domande -->
+        <h1>Sostenibilità & Domande Frequenti</h1> <!-- titolo principale della sezione -->
+        <h2>L’importanza della sostenibilità per De Cecco</h2> <!-- sottotitolo introduttivo della sezione FAQ -->
+          
+          <!-- Ogni elemento della lista rappresenta una domanda e una risposta -->
+          <!-- tabindex="0" serve a rendere ogni item navigabile da tastiera (accessibilità) -->
+        <ul class="list-group">
+          <li class="list-group-item" tabindex="0">
+            <strong>Qual è il segreto della pasta De Cecco?</strong><br>
+            Semola di grano duro, acqua, bassa temperatura, trafila in bronzo, essicazione lenta e un’estrema cura nella 
+            selezione delle materie prime sono il vero segreto della ricetta della pasta De Cecco.
+          </li>
+          <li class="list-group-item" tabindex="0">
+            <strong>Quali sono i valori che guidano De Cecco nella produzione?</strong><br>
+            Responsabilità e cultura del fare: De Cecco ha adottato comportamenti eticamente, socialmente ed ecologicamente corretti 
+            ben prima di ottenere la certificazione di prodotto. L’azienda infatti ha sempre posto una massima attenzione nella scelta 
+            delle materie prime e nella produzione di un prodotto di alta qualità.
+          </li>
+          <li class="list-group-item" tabindex="0">
+            <strong>Qual è il legame tra De Cecco e il territorio abruzzese?</strong><br>
+            Il forte indiscusso legame con l’Abruzzo non è mai venuto meno anche nei momenti di estrema difficoltà; per esempio, 
+            alla fine della seconda guerra mondiale, dopo aver subito la distruzione del complesso industriale, la famiglia De Cecco 
+            decise di ricostruire lo stabilimento di Fara San Martino.
+          </li>
+          <li class="list-group-item" tabindex="0">
+            <strong>Come dimostra De Cecco il proprio rispetto per l’ambiente?</strong><br>
+            Il rispetto verso l’ambiente si manifesta nell’attenzione per l’impatto ambientale degli stabilimenti, collocati in 
+            posizione straordinaria ai piedi della Maiella; il complesso industriale odierno è di colore bianco, della farina, 
+            e azzurro come il cielo, e si inserisce senza traumi nel delicato paesaggio naturale circostante.
+          </li>
+          <li class="list-group-item" tabindex="0">
+            <strong>In che modo De Cecco comunica con i consumatori?</strong><br>
+            Intratteniamo con il consumatore un rapporto chiaro, preciso: non lo possiamo deludere, non vogliamo deluderlo, e 
+            abbiamo anche l’obbligo di rassicurarlo nella sua scelta, facendogli sentire la forza e il prestigio del marchio 
+            cui lui accorda la sua fiducia.
+          </li>
+          <li class="list-group-item" tabindex="0">
+            <strong>De Cecco ha sempre puntato sulla pubblicità?</strong><br>
+            Il nome di De Cecco non compariva sui cartelloni pubblicitari che tappezzavano i muri delle città, sui giornali e nei 
+            caroselli televisivi, eppure misteriosamente tutti lo conoscevano e la pasta De Cecco raggiungeva le cucine dei ristoranti 
+            più rinomati, i negozi di classe, le tavole dei raffinati.
+          </li>
+          <li class="list-group-item" tabindex="0">
+            <strong>Come definisce De Cecco il concetto di qualità?</strong><br>
+            Non si tratta di una qualità generica, non meglio esplicabile al consumatore, bensì di una qualità basata su dati concreti, 
+            su parametri analitici che sono quotidianamente oggetto di costante misurazione e controllo.
+          </li>
+          <li class="list-group-item" tabindex="0">
+            <strong>Perché De Cecco certifica i suoi parametri di qualità?</strong><br>
+            Perché senza la certezza non c’è neppure concretezza e senza concretezza non può esserci vera qualità.
+          </li>
+        </ul>
+
+        <!-- Pulsanti finali -->
+        <div class="d-flex justify-content-center"> <!-- griglia Bootstrap per centrare i pulsanti -->
+          <button onclick="location.href='index.html'" class="btn-secondario">Torna alla homepage</button> <!-- pulsante secondario per homepage -->
+          <button onclick="location.href='sostenibilita.html'" class="btn-primario">Visita la pagina sostenibilità</button> <!-- pulsante primario per sostenibilità -->
+        </div>
+      </div>
+
+      <!-- Colonna destra con una immagine decorativa -->
+      <div class="col-md-1 d-none d-md-block decorazioni_destra"> <!-- colonna visibile da md in poi per immagine decorativa -->
+        <img src="../assets/img/floating_penne.webp" alt="Decorazione pasta penne" class="img-fluid penne"> <!-- immagine decorativa penne con classe per foglio di stile -->
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+  
+<!-- Footer con griglia bootstrap -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center"> <!-- allineamento prima riga del footer -->
+        <div class="col-md-6 footer-brand"> <!-- colonna sinistra classe bootstrap e classe per personalizzazione CSS -->
+          <img src="../assets/img/Logo_DeCecco.webp" alt="Logo De Cecco"><!--img logo nel footer-->
+          <p>F.lli De Cecco S.p.A. - Fara San Martino</p><!--testo nome brand-->
+        </div>
+        <div class="col-md-6 footer-links"> <!-- colonna destra classe bootstrap e classe per personalizzazione css -->
+          <a href="https://www.dececco.com" target="_blank">SITO UFFICIALE</a><!--link alla pagina ufficiale-->
+          <a href="https://www.dececco.com/it_it/contattaci/" target="_blank">CONTATTI</a><!--link ai contatti ufficiali-->
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom"> <!-- seconda riga del footer con classe per personalizzare in css -->
+      <p>© 2025 Tutti i diritti riservati</p><!--copyright-->
+    </div>
+  </footer>
+
+<!-- Pulsante "Torna su" ispirato a W3Schools e personalizzato -->
+  <button onclick="topFunction()" id="scrollTopBtn" title="Torna su">Torna su</button>
+  
+<!-- link cdn per javascript di bootstrap per la responsività del menu -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+<!-- link al file javascript personalizzato -->
+  <script src="js_stand_alone/script.js"></script>
+</body>
+</html>

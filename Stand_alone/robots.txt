@@ -1,0 +1,7 @@
+# File robots.txt inserito solo per simulare una struttura SEO completa.
+# Il sito non è realmente pubblicato, quindi non verrà indicizzato.
+
+User-agent: *     # indica che questa regola vale per tutti i crawler (es. Googlebot, Bingbot...)
+Disallow:         # non viene impedito l'accesso a nessuna pagina
+
+Sitemap: https://www.dececcosostenibile.it/sitemap.xml
