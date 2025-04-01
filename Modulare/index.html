@@ -1,0 +1,113 @@
+<!DOCTYPE html> <!-- la pagina utilizza HTML5-->
+<html lang="it"> <!-- specifica la lingua italiana utile per accessibilità es. lettori vocali -->
+<head>
+  <title>De Cecco - Chi Siamo</title> <!-- titolo della scheda sul browser -->
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png"> <!-- favicon della pagina-->
+  <meta charset="UTF-8"> <!-- codifica dei caratteri -->
+  <!-- Meta tag SEO per la homepage -->
+  <!-- Meta SEO inseriti per mostrare buona pratica d'ottimizzazione SEO -->
+  <meta name="title" content="De Cecco - Qualità che rispetta la tradizione"> <!--titolo che apparirà sul motore di ricerca-->
+  <meta name="description" content="Da 139 anni De Cecco produce pasta secondo la ricetta originale. Scopri il nostro 
+  impegno per la qualità e la sostenibilità."> <!--descrizione che accompagnerà il titolo-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"> <!-- gestisce la 
+  responsività e permette lo zoom per l'accessibilità (pratica consigliata anche da google PageSpeed insight) -->
+  <!-- link cdn bootstrap e google font -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&family=Montserrat:wght@300;600&display=swap" 
+  rel="stylesheet"> <!-- importo Zilla slab e Montserrat font ufficiali De Cecco -->
+  <link rel="stylesheet" href="../assets/css/style.css"> <!-- link al foglio di stile -->
+</head>
+
+<body>
+<!-- sezione menu header -->
+  <div id="menu-header"></div>
+  
+<!-- sezione centrale della pagina -->
+  <main>
+<!-- SEZIONE HERO -->  
+    <section class="hero d-flex "> <!-- sezione hero con layout flessibile e contenuto centrato verticalmente -->
+      <div class="container-fluid"> <!-- contenitore a larghezza piena -->
+        <div class="row"> 
+          <!-- Colonna sinistra con il testo -->
+          <div class="col-md-6"> <!-- classe bootstrap -->
+            <div class="contenuti_hero"> <!-- classe per personalizzare il contenuto in css -->
+              <h1>DE CECCO <br> mugnai dal 1831<br></h1>
+              <p>
+                <br>Produciamo pasta secondo la ricetta di 139 anni fa, mantenendo i concetti di quando siamo nati,
+                pur utilizzando macchinari tecnologicamente all’avanguardia. La nostra priorità è la qualità, 
+                la cura delle materie prime e il rispetto per la tradizione.
+              </p>
+              <button onclick="location.href='sostenibilita.html'" class="btn-primario">Scopri la sostenibilità De Cecco</button>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </section>
+<!-- SEZIONE 2 - OLTRE LA PASTA --> 
+    <section class="oltre-pasta">
+      <h2>OLTRE LA PASTA</h2> <!-- Titolo -->
+      <div class="container">
+        <div class="row"> <!-- contenitore per la griglia Bootstrap: allinea correttamente le colonne -->
+          <!-- Colonna 1 -->
+          <div class="col-12 col-md-4"> <!--classe bootstrap per le colonne-->
+            <img src="../assets/img/ambiente_home.webp" alt="De Cecco rispetta l'ambiente"> <!--immagine colonna 1-->
+            <p>Abbiamo adottato comportamenti eticamente, socialmente ed ecologicamente corretti ben prima <!--testo colonna 1-->
+              di ottenere la certificazione di prodotto.
+            </p>
+          </div>
+    
+          <!-- Colonna 2 -->
+          <div class="col-12 col-md-4"> <!--classe bootstrap per le colonne-->
+            <img src="../assets/img/societa_home.webp" alt="Sostenibilità Sociale di De Cecco"> <!--immagine colonna 2-->
+            <p>I nostri dipendenti non producono semplicemente pasta: sono educati e formati per produrre<!--testo colonna 2-->
+              la qualità, tanto da essere loro i nostri primi sostenitori.
+            </p>
+          </div>
+    
+          <!-- Colonna 3 -->
+          <div class="col-12 col-md-4"> <!--classe bootstrap per le colonne-->
+            <img src="../assets/img/Grano_home.webp" alt="Qualità delle materie prime De Cecco"> <!--immagine colonna 3-->
+            <p>Selezioniamo i migliori grani in base al clima e al raccolto, lavorandoli con trafile<!--testo colonna 3-->
+              in bronzo ad essiccazione lenta fino a 20 ore.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- SEZIONE 3 - CALL TO ACTION FAQ -->  
+    <section class="ambiente d-flex"> <!-- sezione 2 con layout flessibile e contenuto centrato verticalmente -->
+      <div class="container-fluid"> <!-- contenitore a larghezza piena -->
+        <div class="row"> <!-- contenitore per la griglia Bootstrap: allinea correttamente le colonne -->
+          <!-- Colonna sinistra vuota per backtround -->
+          <div class="col-md-6">
+          </div> <!-- classe bootstrap --> 
+            <!-- Colonna destra contenuti -->
+            <div class="col-md-6"> <!-- classe bootstrap --> 
+              <div class="contenuti_ambiente"> <!-- classe per personalizzare il contenuto in css -->
+                <h2>QUALITÀ CHE RISPETTA L’AMBIENTE</h2><!--titolo h2-->
+                <p>
+                Rispettiamo profondamente l’ambiente, il territorio e le persone. Scopri come ci<!--testo sezione 3-->
+                impegniamo attivamente per una migliore sostenibilità ambientale e sociale.
+                </p>
+                <button onclick="location.href='sostenibilita.html'" class="btn-primario">Scarica i nostri report</button>
+                <button onclick="location.href='faq.html'" class="btn-secondario">Domande Frequenti</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+<!-- Contenitore per il footer modulare -->
+  <div id="footer"></div>
+
+<!-- Pulsante "Torna su" ispirato a W3Schools e personalizzato -->
+  <button onclick="topFunction()" id="scrollTopBtn" title="Torna su">Torna su</button>
+  
+<!-- link cdn per javascript di bootstrap per la responsività del menu -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+<!-- link al file javascript personalizzato -->
+  <script src="js_modulare/script.js"></script>
+</body>
+</html>

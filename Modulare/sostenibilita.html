@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!-- la pagina utilizza HTML5-->
+<html lang="it"> <!-- specifica la lingua italiana utile per accessibilità es. lettori vocali -->
+<head>
+  <title>De Cecco - Sostenibilità</title> <!-- titolo della scheda sul browser -->
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png"> <!-- favicon della pagina-->
+  <meta charset="UTF-8"> <!-- codifica dei caratteri -->
+  <!-- Meta tag SEO per la pagina Sostenibilità. Inseriti per dimostrare buona pratica, anche se il sito non sarà pubblicato -->
+  <meta name="title" content="De Cecco e la Sostenibilità - Qualità responsabile"> <!--titolo per i motori di ricerca-->
+  <meta name="description" content="Esplora i valori e le pratiche sostenibili di De Cecco. Un’azienda che unisce responsabilità 
+  ambientale e tradizione italiana."> <!--descrizione motori di ricerca-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"> <!-- gestisce la responsività e permette lo zoom per l'accessibilità (pratica consigliata anche da google PageSpeed insight) -->
+  <!-- link cdn bootstrap e google font -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet"> <!-- importo Zilla slab e Montserrat font ufficiali De Cecco -->
+  <link rel="stylesheet" href="../assets/css/style.css"> <!-- link al foglio di stile -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body> 
+  <div class="finto-sfondo"> <!--necessario per correggere l'effetto parallax su versione mobile-->
+  </div>
+<!-- sezione menu header -->
+<div id="menu-header"></div>
+<!-- sezione centrale della pagina -->
+<main>
+  <div class="parallax montagne"> <!-- Sezione parallax con immagine fissa e titolo centrale -->
+    <h1 class="titolo-parallax">DE CECCO<br>Qualità Sostenibile</h1> <!-- titolo h1 con br per andare a capo -->
+  </div>
+  
+  <div class="sfondo-grano"> <!-- Sezione con 2° background con effetto parallax -->
+    <div class="container effetto-vetro"> <!--contenitore bootstrap con effetto vetro e testo introduttivo sulla sostenibilità-->
+      <p>Da sempre, la qualità e la sostenibilità sono i principali valori della nostra azienda. I nostri report raccontano il nostro 
+        impegno attraverso dati concreti, scopri come da sempre rispettiamo l’ambiente e come continueremo a farlo.
+      </p>
+    </div>
+  </div>
+  <!-- Sezione dei report scaricabili -->
+  <section class="contenuto-download"> <!-- dichiarazione classe della sezione -->
+    <h2>I NOSTRI REPORT DI SOSTENIBILITÀ</h2> <!-- titolo h2 della sezione -->
+    <!--Griglia bootstrap per le card dei report-->
+    <div class="container">
+      <div class="row">
+        <!-- CARD 2021 -->
+         <!-- tutte le card hanno la stessa struttura, solo la prima card ha commenti esplicativi per evitare ridondanze -->
+        <div class="col-md-4">
+          <div class="card-download"> <!-- contenitore principale della card -->
+            <div class="box-immagine"> <!-- contenitore per l'immagine di copertina -->
+              <img src="../assets/img/radici_sostenibili.webp" alt="Copertina Report 2021">
+            </div>
+          
+            <div class="etichetta-anno">ANNO 2021</div> <!-- contenitore per l'anno di riferimento -->
+          
+            <p class="descrizione">Nel report 2021, poniamo un focus sulle Certificazioni Ambientali e Sociali 
+              (EDP, SA8000, IS026000), spiegandone il significato.</p> <!-- riassunto del report -->
+
+              <!-- a seguire link scaricabile per il report con classe css di un pulsante-->          
+            <a href="../assets/pdf/Report2021.pdf" target="_blank" class="btn-secondario"><i class="bi bi-download"></i> Scarica</a>
+          </div>
+        </div>
+        <!-- CARD 2022 -->
+        <div class="col-md-4">
+          <div class="card-download">
+            <div class="box-immagine">
+              <img src="../assets/img/energia_rinnovabile.webp" alt="Copertina Report 2022">
+            </div>
+          
+            <div class="etichetta-anno">ANNO 2022</div>
+          
+            <p class="descrizione">Nel report 2022, trattiamo i progressi compiuti nel campo delle energie rinnovabili; 
+              in particolare descriviamo l’utilizzo del generatore idroelettrico di Fara San Martino.</p>
+          
+            <a href="../assets/pdf/Report2022.pdf" target="_blank" class="btn-secondario"><i class="bi bi-download"></i> Scarica</a>
+          </div>
+        </div>
+        <!-- CARD 2023 -->
+        <div class="col-md-4">
+          <div class="card-download">
+            <div class="box-immagine">
+              <img src="../assets/img/impegno_globale.webp" alt="Copertina Report 2023">
+            </div>
+          
+            <div class="etichetta-anno">ANNO 2023</div>
+          
+            <p class="descrizione">Nel report 2023, evidenziamo come stiamo promuovendo una filiera più sostenibile e territoriale,
+              illustrando la nostra strategia di sostituzione del grano importato con coltivazioni abruzzesi.</p>
+          
+            <a href="../assets/pdf/Report2023.pdf" target="_blank" class="btn-secondario"><i class="bi bi-download"></i> Scarica</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</main>
+  
+<!-- Contenitore per il footer modulare -->
+  <div id="footer"></div>
+
+<!-- Pulsante "Torna su" ispirato a W3Schools e personalizzato -->
+  <button onclick="topFunction()" id="scrollTopBtn" title="Torna su">Torna su</button>
+  
+<!-- link cdn per javascript di bootstrap per la responsività del menu -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+<!-- link al file javascript personalizzato -->
+  <script src="js_modulare/script.js"></script>
+</body>
+</html>
